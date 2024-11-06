@@ -1,5 +1,6 @@
 .mainContainer {
     width: 100%;
+
 }
 
 .cardLocker {
@@ -17,7 +18,7 @@
     justify-content: center;
     margin: 10px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 20px;
 }
 
@@ -37,11 +38,9 @@
     width: 25%;
     margin: 5px;
     padding: 5px;
-    border: 1px solid black;
     border-radius: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: white;
 }

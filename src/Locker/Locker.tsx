@@ -25,8 +25,8 @@ const Locker = () => {
     }
 
     return (
-        <form className='container mainContainer' onSubmit={handleSubmit}>
-            <div className='cardLocker'>
+        <form className='container mainContainer ' onSubmit={handleSubmit}>
+            <div className='cardLocker bg-dark'>
                 <div className='cardHeader'>
                     {message !== null &&(
                         <p>
@@ -45,7 +45,7 @@ const Locker = () => {
             {NUMBERS_FIRST.map((number) => (
                 <button
                     onClick={() => dispatch(addNum(number.number))}
-                    className='numberBtn' key={number.id}
+                    className='btn btn-dark border-light numberBtn' key={number.id}
                     value={number.number} type='button'
                 >{number.number}
                 </button>
@@ -56,7 +56,7 @@ const Locker = () => {
                     {NUMBERS_SECOND.map((number) => (
                         <button
                             onClick={() => dispatch(addNum(number.number))}
-                            className='numberBtn' key={number.id}
+                            className='btn btn-dark border-light numberBtn' key={number.id}
                             value={number.number} type='button'
                         >{number.number}
                         </button>
@@ -67,7 +67,7 @@ const Locker = () => {
                     {NUMBERS_THIRD.map((number) => (
                         <button
                             onClick={() => dispatch(addNum(number.number))}
-                            className='numberBtn' key={number.id}
+                            className='btn btn-dark border-light numberBtn' key={number.id}
                             value={number.number} type='button'
                         >{number.number}
                         </button>
@@ -75,9 +75,9 @@ const Locker = () => {
                 </div>
 
                 <div className='buttonsCol'>
-                    <button className='numberBtn' onClick={() => dispatch(deleteNum())}>delete</button>
-                    <button className='numberBtn'  onClick={() => dispatch(addNum('0'))} >0</button>
-                    <button className='numberBtn'>enter</button>
+                    <button className='btn btn-dark border-light numberBtn' onClick={() => dispatch(deleteNum())}>delete</button>
+                    <button className='btn btn-dark border-light numberBtn'  onClick={() => dispatch(addNum('0'))} >0</button>
+                    <button className='btn btn-dark border-light numberBtn'>enter</button>
                 </div>
             </div>
         </form>
