@@ -1,0 +1,46 @@
+.mainContainer {
+    width: 100%;
+}
+
+.cardLocker {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.buttonsCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttonRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.numberBtn {
+    width: 25%;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+}
