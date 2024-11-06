@@ -2,13 +2,15 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 interface LockerState {
     value: string;
+    message: boolean | null
 }
 
 const initialState: LockerState = {
-    value: ''
+    value: '',
+    message: null
 }
 
-const truePin = 2626;
+const truePin = '2626';
 
 const lockerSlice = createSlice({
     name: 'locker',
@@ -21,11 +23,17 @@ const lockerSlice = createSlice({
     },
         deleteNum: (state) => {
         state.value = state.value.slice(0, -1)
+        },
+
+        checkout: (state, action: PayloadAction<string>) => {
+           state.message = action.payload === truePin
         }
     }
+
 })
 
 export const lockerReducer = lockerSlice.reducer;
 
 export const {addNum,
-deleteNum} = lockerSlice.actions
+deleteNum,
+checkout} = lockerSlice.actions
