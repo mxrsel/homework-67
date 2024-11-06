@@ -18,11 +18,12 @@
     margin: 10px;
     text-align: center;
     border: 1px solid black;
+    padding: 20px;
 }
 
 .buttonsCol {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 }
 

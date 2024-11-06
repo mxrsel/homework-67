@@ -18,10 +18,14 @@ const lockerSlice = createSlice({
         if (state.value.length < 4) {
             state.value += action.payload
         }
-    }
+    },
+        deleteNum: (state) => {
+        state.value = state.value.slice(0, -1)
+        }
     }
 })
 
 export const lockerReducer = lockerSlice.reducer;
 
-export const {addNum} = lockerSlice.actions
+export const {addNum,
+deleteNum} = lockerSlice.actions

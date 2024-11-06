@@ -1,7 +1,7 @@
-import {NUMBERS} from "../numbers";
+import {NUMBERS_FIRST, NUMBERS_SECOND, NUMBERS_THIRD} from "../numbers";
 import './Locker.css'
 import {useDispatch, useSelector} from "react-redux";
-import {addNum} from "./lockerSlice";
+import {addNum, deleteNum} from "./lockerSlice";
 import {RootState} from "../app/store";
 import {useEffect, useState} from "react";
 
@@ -21,9 +21,42 @@ const Locker = () => {
                     {displayNum}
                 </div>
                 <div className='buttonsCol'>
-            {NUMBERS.map((number) => (
-                <button onClick={() => dispatch(addNum(number.number))} className='numberBtn' key={number.id} value={number.number} type='button'>{number.number}</button>
+            {NUMBERS_FIRST.map((number) => (
+                <button
+                    onClick={() => dispatch(addNum(number.number))}
+                    className='numberBtn' key={number.id}
+                    value={number.number} type='button'
+                >{number.number}
+                </button>
             ))}
+                </div>
+
+                <div className='buttonsCol'>
+                    {NUMBERS_SECOND.map((number) => (
+                        <button
+                            onClick={() => dispatch(addNum(number.number))}
+                            className='numberBtn' key={number.id}
+                            value={number.number} type='button'
+                        >{number.number}
+                        </button>
+                    ))}
+                </div>
+
+                <div className='buttonsCol'>
+                    {NUMBERS_THIRD.map((number) => (
+                        <button
+                            onClick={() => dispatch(addNum(number.number))}
+                            className='numberBtn' key={number.id}
+                            value={number.number} type='button'
+                        >{number.number}
+                        </button>
+                    ))}
+                </div>
+
+                <div className='buttonsCol'>
+                    <button className='numberBtn' onClick={() => dispatch(deleteNum())}>delete</button>
+                    <button className='numberBtn'  onClick={() => dispatch(addNum('0'))} >0</button>
+                    <button className='numberBtn'>enter</button>
                 </div>
             </div>
         </div>
